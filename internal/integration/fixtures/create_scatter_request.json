@@ -1,0 +1,64 @@
+{
+  "chart": {
+    "sizes": {
+      "width": 800,
+      "height": 600
+    },
+    "axes": {
+      "left": {
+        "kind": "linear",
+        "range_start": 0,
+        "range_end": 460,
+        "domain_numeric": {
+          "start": 0,
+          "end": 100.0
+        }
+      },
+      "right": {
+        "kind": "linear",
+        "range_start": 0,
+        "range_end": 460,
+        "domain_numeric": {
+          "start": 0,
+          "end": 100.0
+        }
+      },
+      "top": {
+        "kind": "linear",
+        "range_start": 0,
+        "range_end": 700,
+        "domain_numeric": {
+          "start": 0,
+          "end": 200
+        }
+      },
+      "bottom": {
+        "kind": "linear",
+        "range_start": 0,
+        "range_end": 700,
+        "domain_numeric": {
+          "start": 0,
+          "end": 200
+        }
+      }
+    },
+    "views": [
+      {
+        "kind": "scatter",
+        "points_values": {
+          "values": [
+            [20.1, 54.11],
+            [70.2, 40.22],
+            [130.3, 50.33],
+            [170.4, 70.44],
+            [20.5, 90.55],
+            [95.6, 40.66],
+            [130.7, 12.77],
+            [170.8, 2.88]
+          ]
+        },
+        "point_label_position": "bottom_right"
+      }
+    ]
+  }
+}

@@ -5,24 +5,24 @@ services:
       - "lc-renderer"
     image: ghcr.io/limpidchart/lc-api:develop
     environment:
-      - LC_API_RENDERER_ADDRESS=lc-renderer:54120
+      - LC_API_RENDERER_ADDRESS=lc-renderer:54020
       - LC_API_RENDERER_CONN_TIMEOUT=5
       - LC_API_RENDERER_REQUEST_TIMEOUT=30
       - LC_API_GRPC_ADDRESS=0.0.0.0:54010
       - LC_API_GRPC_SHUTDOWN_TIMEOUT=5
-      - LC_API_GRPC_HEALTH_CHECK_ADDRESS=0.0.0.0:54111
-      - LC_API_HTTP_ADDRESS=0.0.0.0:54112
+      - LC_API_GRPC_HEALTH_CHECK_ADDRESS=0.0.0.0:54011
+      - LC_API_HTTP_ADDRESS=0.0.0.0:54012
       - LC_API_HTTP_SHUTDOWN_TIMEOUT=5
       - LC_API_HTTP_READ_TIMEOUT=5
       - LC_API_HTTP_WRITE_TIMEOUT=10
       - LC_API_HTTP_IDLE_TIMEOUT=120
     ports:
-      - "54110:54110"
-      - "54111:54111"
-      - "54112:54112"
+      - "54010:54010"
+      - "54011:54011"
+      - "54012:54012"
   lc-renderer:
     image: ghcr.io/limpidchart/lc-renderer:develop
     environment:
-      - LC_RENDERER_ADDR=0.0.0.0:54120
+      - LC_RENDERER_ADDR=0.0.0.0:54020
     ports:
-      - "54120:54120"
+      - "54020:54020"
