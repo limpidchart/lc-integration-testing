@@ -1,0 +1,19 @@
+name: integration-testing-stable
+
+on:
+  schedule:
+    - cron: '32 8 * * SAT'
+
+jobs:
+  build-and-publish-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - id: docker-compose-up
+        run: docker-compose --file compose/stable/docker-compose.yml up -d
+
+      - uses: actions/setup-go@v1
+        with:
+          go-version: 1.16
+      - run: go test -v ./internal/integration/...
