@@ -7,17 +7,15 @@ To run tests locally you must start services. You can start develop or stable re
 Do the following to start the develop release:
 
 ```sh
-cd compose/develop
-docker compose up -d
-cd ../..
+docker compose --file compose/develop/docker-compose.yml pull
+docker compose --file compose/develop/docker-compose.yml up -d
 ```
 
 Do the following to start the stable release:
 
 ```sh
-cd compose/stable
-docker compose up -d
-cd ../..
+docker compose --file compose/stable/docker-compose.yml pull
+docker compose --file compose/stable/docker-compose.yml up -d
 ```
 
 Then you can run the tests:
@@ -29,13 +27,9 @@ go test -v ./internal/intergration/...
 Don't forget to clean up after running tests:
 
 ```sh
-cd compose/develop
-docker compose down --remove-orphans
-cd ../..
+docker compose --file compose/develop/docker-compose.yml down --remove-orphans
 ```
 
 ```sh
-cd compose/stable
-docker compose down --remove-orphans
-cd ../..
+docker compose --file compose/stable/docker-compose.yml down --remove-orphans
 ```
