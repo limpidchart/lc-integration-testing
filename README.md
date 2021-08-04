@@ -21,7 +21,7 @@ docker compose --file compose/stable/docker-compose.yml up -d
 Then you can run the tests:
 
 ```sh
-go test -v ./internal/intergration/...
+go test -v ./internal/integration/...
 ```
 
 Don't forget to clean up after running tests:

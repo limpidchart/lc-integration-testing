@@ -1,0 +1,56 @@
+{
+  "chart": {
+    "title": "Vertical Bar Chart",
+    "sizes": {
+      "width": 800,
+      "height": 600
+    },
+    "margins": {
+      "top": 90,
+      "bottom": 50,
+      "left": 60,
+      "right": 40
+    },
+    "axes": {
+      "left_label": "Values",
+      "left": {
+        "kind": "linear",
+        "domain_numeric": {
+          "start": 0,
+          "end": 100
+        }
+      },
+      "bottom_label": "Categories",
+      "bottom": {
+        "kind": "band",
+        "domain_categories": {
+          "categories": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        }
+      }
+    },
+    "views": [
+      {
+        "kind": "vertical_bar",
+        "bars_values": [
+          {
+            "values": [92, 12, 34.8, 24, 2.5],
+            "colors": {
+              "fill": {
+                "hex": "#36896e"
+              },
+              "stroke": {
+                "hex": "#0c513b"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

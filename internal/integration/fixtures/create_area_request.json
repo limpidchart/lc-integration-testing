@@ -1,0 +1,70 @@
+{
+  "chart": {
+    "title": "Single Area Chart",
+    "sizes": {
+      "width": 1200,
+      "height": 700
+    },
+    "margins": {
+      "top": 20,
+      "bottom": 70,
+      "left": 40,
+      "right": 30
+    },
+    "axes": {
+      "bottom_label": "X Values",
+      "bottom": {
+        "kind": "band",
+        "range_start": 0,
+        "range_end": 1130,
+        "domain_categories": {
+          "categories": [
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5",
+            "a6"
+          ]
+        },
+        "no_boundaries_offset": true,
+        "inner_padding": 0,
+        "outer_padding": 0
+      },
+      "left_label": "Y Values",
+      "left": {
+        "kind": "linear",
+        "range_start": 0,
+        "range_end": 610,
+        "domain_numeric": {
+          "start": 0,
+          "end": 200
+        }
+      }
+    },
+    "views": [
+      {
+        "kind": "area",
+        "scalar_values": {
+          "values": [12, 100, 120, 180, 40, 8]
+        },
+        "colors": {
+          "fill": {
+            "hex": "#ffa700"
+          },
+          "stroke": {
+            "hex": "#ff8d00"
+          },
+          "point_fill": {
+            "hex": "#ff7400"
+          },
+          "point_stroke": {
+            "hex": "#ff7400"
+          }
+        },
+        "point_type": "square",
+        "point_label_position": "top_right"
+      }
+    ]
+  }
+}

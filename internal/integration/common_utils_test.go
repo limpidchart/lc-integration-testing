@@ -12,6 +12,43 @@ import (
 	"github.com/google/uuid"
 )
 
+const (
+	errCreateChartFmt                  = "Unable to create chart: %s"
+	errValidateChartBasicFieldsFmt     = "Unable to validate reply basic fields: %s"
+	errValidateChartTimestampFieldsFmt = "Unable to validate reply timestamp fields: %s"
+	errValidateChartDataFmt            = "Unable to validate reply chart data: %s"
+
+	createAreaRequestJSONPath = "fixtures/create_area_request.json"
+	createAreaReplyData       = "fixtures/create_area_reply_data.svg"
+
+	createHorizontalBarRequestJSONPath = "fixtures/create_horizontal_bar_request.json"
+	createHorizontalBarReplyData       = "fixtures/create_horizontal_bar_reply_data.svg"
+
+	createLineAndVerticalBarRequestJSONPath = "fixtures/create_line_and_vertical_bar_request.json"
+	createLineAndVerticalBarReplyData       = "fixtures/create_line_and_vertical_bar_reply_data.svg"
+
+	createLineRequestJSONPath = "fixtures/create_line_request.json"
+	createLineReplyData       = "fixtures/create_line_reply_data.svg"
+
+	createScatterRequestJSONPath = "fixtures/create_scatter_request.json"
+	createScatterReplyData       = "fixtures/create_scatter_reply_data.svg"
+
+	createStackedHorizontalBarRequestJSONPath = "fixtures/create_stacked_horizontal_bar_request.json"
+	createStackedHorizontalBarReplyData       = "fixtures/create_stacked_horizontal_bar_reply_data.svg"
+
+	createStackedVerticalBarRequestJSONPath = "fixtures/create_stacked_vertical_bar_request.json"
+	createStackedVerticalBarReplyData       = "fixtures/create_stacked_vertical_bar_reply_data.svg"
+
+	createTwoLinesRequestJSONPath = "fixtures/create_two_lines_request.json"
+	createTwoLinesReplyData       = "fixtures/create_two_lines_reply_data.svg"
+
+	createTwoScattersRequestJSONPath = "fixtures/create_two_scatters_request.json"
+	createTwoScattersReplyData       = "fixtures/create_two_scatters_reply_data.svg"
+
+	createVerticalBarRequestJSONPath = "fixtures/create_vertical_bar_request.json"
+	createVerticalBarReplyData       = "fixtures/create_vertical_bar_reply_data.svg"
+)
+
 func checkBasicCreateChartReplyFields(rep *ChartReply, testStart time.Time) error {
 	if err := checkUUID(rep.RequestID); err != nil {
 		return fmt.Errorf("unable to parse request ID: %s", err)

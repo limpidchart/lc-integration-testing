@@ -1,0 +1,84 @@
+{
+  "chart": {
+    "sizes": {
+      "width": 800,
+      "height": 600
+    },
+    "margins": {
+      "top": 90,
+      "bottom": 50,
+      "left": 60,
+      "right": 40
+    },
+    "axes": {
+      "left": {
+        "kind": "linear",
+        "domain_numeric": {
+          "start": 0,
+          "end": 100
+        }
+      },
+      "right": {
+        "kind": "linear",
+        "domain_numeric": {
+          "start": 0,
+          "end": 100
+        }
+      },
+      "top": {
+        "kind": "linear",
+        "domain_numeric": {
+          "start": 0,
+          "end": 200.0
+        }
+      },
+      "bottom": {
+        "kind": "linear",
+        "domain_numeric": {
+          "start": 0,
+          "end": 200.0
+        }
+      }
+    },
+    "views": [
+      {
+        "kind": "scatter",
+        "points_values": {
+          "values": [
+            [20, 90],
+            [12, 54],
+            [25, 70],
+            [33, 40]
+          ]
+        },
+        "colors": {
+          "point_fill": {
+            "hex": "#808080"
+          },
+          "point_stroke": {
+            "hex": "#000000"
+          }
+        }
+      },
+      {
+        "kind": "scatter",
+        "points_values": {
+          "values": [
+            [120, 10],
+            [143, 34],
+            [170, 14],
+            [190, 13]
+          ]
+        },
+        "colors": {
+          "point_fill": {
+            "hex": "#000000"
+          },
+          "point_stroke": {
+            "hex": "#808080"
+          }
+        }
+      }
+    ]
+  }
+}

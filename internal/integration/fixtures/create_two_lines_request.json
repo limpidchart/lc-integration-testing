@@ -1,0 +1,66 @@
+{
+  "chart": {
+    "sizes": {
+      "width": 1000,
+      "height": 800
+    },
+    "margins": {
+      "top": 30,
+      "bottom": 40,
+      "left": 40,
+      "right": 20
+    },
+    "axes": {
+      "left": {
+        "kind": "linear",
+        "domain_numeric": {
+          "start": 0,
+          "end": 200.0
+        }
+      },
+      "bottom": {
+        "kind": "band",
+        "domain_categories": {
+          "categories": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ]
+        }
+      }
+    },
+    "views": [
+      {
+        "kind": "line",
+        "scalar_values": {
+          "values": [20, 70, 130, 180, 20, 77, 140, 190]
+        },
+        "point_label_position": "bottom_left",
+        "colors": {
+          "stroke": {
+            "hex": "#0e3569"
+          }
+        },
+        "point_visible": false
+      },
+      {
+        "kind": "line",
+        "scalar_values": {
+          "values": [54, 40, 50, 77, 91, 53, 11, 3]
+        },
+        "point_label_position": "top_right",
+        "colors": {
+          "stroke": {
+            "hex": "#5095e5"
+          }
+        },
+        "point_visible": false
+      }
+    ]
+  }
+}

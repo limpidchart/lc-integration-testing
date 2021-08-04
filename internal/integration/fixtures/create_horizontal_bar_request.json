@@ -1,0 +1,60 @@
+{
+  "chart": {
+    "title": "Horizontal Bar Chart",
+    "sizes": {
+      "width": 800,
+      "height": 600
+    },
+    "margins": {
+      "top": 90,
+      "bottom": 50,
+      "left": 60,
+      "right": 40
+    },
+    "axes": {
+      "bottom_label": "Categories",
+      "bottom": {
+        "kind": "linear",
+        "range_start": 0,
+        "range_end": 700,
+        "domain_numeric": {
+          "start": 0,
+          "end": 100.0
+        }
+      },
+      "left_label": "Values",
+      "left": {
+        "kind": "band",
+        "range_start": 0,
+        "range_end": 460,
+        "domain_categories": {
+          "categories": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        }
+      }
+    },
+    "views": [
+      {
+        "kind": "horizontal_bar",
+        "bars_values": [
+          {
+            "values": [92, 12, 34.8, 24, 9.5],
+            "colors": {
+              "fill": {
+                "hex": "#898fd5"
+              },
+              "stroke": {
+                "hex": "#2c2663"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

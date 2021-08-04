@@ -1,0 +1,48 @@
+{
+  "chart": {
+    "sizes": {
+      "width": 1200,
+      "height": 700
+    },
+    "margins": {
+      "top": 20,
+      "bottom": 70,
+      "left": 40,
+      "right": 30
+    },
+    "axes": {
+      "left": {
+        "kind": "linear",
+        "domain_numeric": {
+          "start": 0,
+          "end": 200
+        }
+      },
+      "bottom": {
+        "kind": "band",
+        "domain_categories": {
+          "categories": [
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5",
+            "a6"
+          ]
+        },
+        "no_boundaries_offset": true,
+        "inner_padding": 0.0,
+        "outer_padding": 0.0
+      }
+    },
+    "views": [
+      {
+        "kind": "line",
+        "scalar_values": {
+          "values": [12, 100, 120, 180, 40, 8]
+        },
+        "point_label_position": "top_right"
+      }
+    ]
+  }
+}
