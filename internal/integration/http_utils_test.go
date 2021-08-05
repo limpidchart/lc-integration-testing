@@ -8,7 +8,6 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strings"
-	"time"
 )
 
 const LCAPIHTTPTimeout = 60
@@ -25,16 +24,6 @@ const (
 	contentTypeHeader = "content-type"
 	contentTypeJSON   = "application/json"
 )
-
-// ChartReply represents a reply from create or get requests.
-type ChartReply struct {
-	RequestID   string     `json:"request_id"`
-	ChartID     string     `json:"chart_id"`
-	ChartStatus string     `json:"chart_status"`
-	CreatedAt   *time.Time `json:"created_at"`
-	DeletedAt   *time.Time `json:"deleted_at"`
-	ChartData   string     `json:"chart_data"`
-}
 
 func createChartAndParseGoodReplyHTTP(ctx context.Context, requestPath string) (*ChartReply, error) {
 	reqBody, err := ioutil.ReadFile(requestPath)

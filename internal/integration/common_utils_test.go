@@ -1,7 +1,6 @@
 package integration_test
 
 import (
-	"encoding/base64"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -9,15 +8,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/limpidchart/lc-integration-testing/internal/render/github.com/limpidchart/lc-proto/render/v0"
+
 	"github.com/google/uuid"
 )
 
 const (
-	errCreateChartFmt                  = "Unable to create chart: %s"
-	errValidateChartBasicFieldsFmt     = "Unable to validate reply basic fields: %s"
-	errValidateChartTimestampFieldsFmt = "Unable to validate reply timestamp fields: %s"
-	errValidateChartDataFmt            = "Unable to validate reply chart data: %s"
-
 	createAreaRequestJSONPath = "fixtures/create_area_request.json"
 	createAreaReplyData       = "fixtures/create_area_reply_data.svg"
 
@@ -48,6 +44,30 @@ const (
 	createVerticalBarRequestJSONPath = "fixtures/create_vertical_bar_request.json"
 	createVerticalBarReplyData       = "fixtures/create_vertical_bar_reply_data.svg"
 )
+
+// ChartReply represents a reply from create or get requests.
+type ChartReply struct {
+	RequestID   string     `json:"request_id"`
+	ChartID     string     `json:"chart_id"`
+	ChartStatus string     `json:"chart_status"`
+	CreatedAt   *time.Time `json:"created_at"`
+	DeletedAt   *time.Time `json:"deleted_at"`
+	ChartData   string     `json:"chart_data"`
+}
+
+func chartReplyFromProtobuf(reply *render.ChartReply) *ChartReply {
+	createdAt := reply.CreatedAt.AsTime()
+	deletedAt := reply.DeletedAt.AsTime()
+
+	return &ChartReply{
+		RequestID:   reply.RequestId,
+		ChartID:     reply.ChartId,
+		ChartStatus: string(reply.ChartStatus),
+		CreatedAt:   &createdAt,
+		DeletedAt:   &deletedAt,
+		ChartData:   string(reply.ChartData),
+	}
+}
 
 func checkBasicCreateChartReplyFields(rep *ChartReply, testStart time.Time) error {
 	if err := checkUUID(rep.RequestID); err != nil {
@@ -89,20 +109,15 @@ func checkCreateChartReplyCreatedAtAndDeletedAtEqual(rep *ChartReply) error {
 	return nil
 }
 
-func compareExpectedAndActualChartLines(expectedChartDataPath, actualChartData string) error {
-	expected, err := ioutil.ReadFile(expectedChartDataPath)
+func compareExpectedAndActualChartLines(expectedChartDataPath string, actualChartData []byte) error {
+	expectedChartData, err := ioutil.ReadFile(expectedChartDataPath)
 	if err != nil {
 		return fmt.Errorf("unable to read %s: %w", expectedChartDataPath, err)
 	}
 
-	actual, err := base64.StdEncoding.DecodeString(actualChartData)
-	if err != nil {
-		return fmt.Errorf("unable to decode base64 chart data: %w", err)
-	}
-
 	if err = checkIfElementsMatch(
-		strings.Split(string(expected), "\n"),
-		strings.Split(string(actual), "\n"),
+		strings.Split(string(expectedChartData), "\n"),
+		strings.Split(string(actualChartData), "\n"),
 	); err != nil {
 		return fmt.Errorf("expected and actual lines don't match: %w", err)
 	}
