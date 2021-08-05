@@ -5,7 +5,7 @@ on:
     - cron: '32 8 * * *'
 
 jobs:
-  build-and-publish-release:
+  test-develop:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
