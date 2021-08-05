@@ -58,6 +58,7 @@ func createChartHTTP(ctx context.Context, body string) (*http.Response, error) {
 	req.Header.Set(contentTypeHeader, contentTypeJSON)
 
 	c := &http.Client{}
+
 	resp, err := c.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("unable to do HTTP request: %w", err)

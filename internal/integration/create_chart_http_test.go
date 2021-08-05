@@ -83,12 +83,12 @@ func TestCreateChart_HTTP(t *testing.T) {
 				t.Fatalf("Unable to create chart: %s", err)
 			}
 
-			if err := checkBasicCreateChartReplyFields(chartRep, testStart); err != nil {
-				t.Fatalf("Unable to validate reply basic fields: %s", err)
+			if errBasicFields := checkBasicCreateChartReplyFields(chartRep, testStart); errBasicFields != nil {
+				t.Fatalf("Unable to validate reply basic fields: %s", errBasicFields)
 			}
 
-			if err := checkCreateChartReplyCreatedAtAndDeletedAtEqual(chartRep); err != nil {
-				t.Fatalf("Unable to validate reply timestamp fields: %s", err)
+			if errTSFields := checkCreateChartReplyCreatedAtAndDeletedAtEqual(chartRep); errTSFields != nil {
+				t.Fatalf("Unable to validate reply timestamp fields: %s", errTSFields)
 			}
 
 			actualData, err := base64.StdEncoding.DecodeString(chartRep.ChartData)
