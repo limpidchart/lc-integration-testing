@@ -5,7 +5,7 @@ on:
     - cron: '32 8 * * SAT'
 
 jobs:
-  build-and-publish-release:
+  test-stable:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
