@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/limpidchart/lc-integration-testing/internal/render/github.com/limpidchart/lc-proto/render/v0"
-
 	"github.com/google/uuid"
+
+	"github.com/limpidchart/lc-integration-testing/internal/render/github.com/limpidchart/lc-proto/render/v0"
 )
 
 const (
@@ -71,11 +71,11 @@ func chartReplyFromProtobuf(reply *render.ChartReply) *ChartReply {
 
 func checkBasicCreateChartReplyFields(rep *ChartReply, testStart time.Time) error {
 	if err := checkUUID(rep.RequestID); err != nil {
-		return fmt.Errorf("unable to parse request ID: %s", err)
+		return fmt.Errorf("unable to parse request ID: %w", err)
 	}
 
 	if err := checkUUID(rep.ChartID); err != nil {
-		return fmt.Errorf("unable to parse chart ID: %s", err)
+		return fmt.Errorf("unable to parse chart ID: %w", err)
 	}
 
 	if rep.CreatedAt == nil {
@@ -139,16 +139,20 @@ func checkIfElementsMatch(listA, listB []string) error {
 
 	for i := range listA {
 		found := false
+
 		for j := range listB {
 			if visited[j] {
 				continue
 			}
+
 			if listA[i] == listB[j] {
 				visited[j] = true
 				found = true
+
 				break
 			}
 		}
+
 		if !found {
 			extraA = append(extraA, listA[i])
 		}

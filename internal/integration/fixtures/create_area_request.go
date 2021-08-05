@@ -1,9 +1,9 @@
 package fixtures
 
 import (
-	"github.com/limpidchart/lc-integration-testing/internal/render/github.com/limpidchart/lc-proto/render/v0"
+	"google.golang.org/protobuf/types/known/wrapperspb"
 
-	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
+	"github.com/limpidchart/lc-integration-testing/internal/render/github.com/limpidchart/lc-proto/render/v0"
 )
 
 func CreateAreaRequest() *render.CreateChartRequest {
