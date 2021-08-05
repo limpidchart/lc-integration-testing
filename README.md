@@ -1,6 +1,6 @@
-# lc-intergration-testing
+# lc-integration-testing
 
-This repo contains integration tests for limpidchart services.
+Integration tests for limpidchart services.
 
 To run tests locally you must start services. You can start develop or stable release using docker compose.
 
