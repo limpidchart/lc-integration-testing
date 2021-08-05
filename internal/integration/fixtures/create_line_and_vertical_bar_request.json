@@ -64,7 +64,7 @@
           "point_stroke": {
             "hex": "#234d20"
           },
-          "point": {
+          "point_fill": {
             "hex": "#234d20"
           }
         },

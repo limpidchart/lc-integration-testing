@@ -104,10 +104,10 @@
 </g>
 <g class="views" transform="translate(60,90)">
 <g>
-<g class="bar" transform="translate(601.40845,0)">
-<rect fill="#77ab59" height="392.46115" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="67.53885"/>
-<text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="263.7694">
-72.52
+<g class="bar" transform="translate(9.859131,0)">
+<rect fill="#77ab59" height="404.36707" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="55.632935"/>
+<text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="257.81647">
+74.72
 </text>
 </g>
 <g class="bar" transform="translate(207.04224,0)">
@@ -116,10 +116,10 @@
 64.18
 </text>
 </g>
-<g class="bar" transform="translate(9.859131,0)">
-<rect fill="#77ab59" height="404.36707" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="55.632935"/>
-<text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="257.81647">
-74.72
+<g class="bar" transform="translate(108.45068,0)">
+<rect fill="#77ab59" height="359.01645" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="100.98355"/>
+<text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="280.49176">
+66.34
 </text>
 </g>
 <g class="bar" transform="translate(305.6338,0)">
@@ -128,46 +128,46 @@
 74.32
 </text>
 </g>
-<g class="bar" transform="translate(404.22534,0)">
-<rect fill="#77ab59" height="371.3553" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="88.644714"/>
-<text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="274.32236">
-68.62
-</text>
-</g>
-<g class="bar" transform="translate(108.45068,0)">
-<rect fill="#77ab59" height="359.01645" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="100.98355"/>
-<text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="280.49176">
-66.34
-</text>
-</g>
 <g class="bar" transform="translate(502.8169,0)">
 <rect fill="#77ab59" height="350.46588" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="109.53412"/>
 <text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="284.76706">
 64.76
 </text>
 </g>
+<g class="bar" transform="translate(404.22534,0)">
+<rect fill="#77ab59" height="371.3553" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="88.644714"/>
+<text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="274.32236">
+68.62
+</text>
+</g>
+<g class="bar" transform="translate(601.40845,0)">
+<rect fill="#77ab59" height="392.46115" shape-rendering="crispEdges" stroke="#36802d" stroke-width="1" width="88.73239" x="0" y="67.53885"/>
+<text dy=".35em" fill="#080808" font-family="sans-serif" font-size="14px" text-anchor="middle" x="44.366196" y="263.7694">
+72.52
+</text>
+</g>
 </g>
 <g>
 <g class="point" transform="translate(54.225327,55.632935)">
-<circle cx="0" cy="0" fill="#71c7ec" r="5" stroke="#234d20"/>
+<circle cx="0" cy="0" fill="#234d20" r="5" stroke="#234d20"/>
 </g>
 <g class="point" transform="translate(152.81688,100.98355)">
-<circle cx="0" cy="0" fill="#71c7ec" r="5" stroke="#234d20"/>
+<circle cx="0" cy="0" fill="#234d20" r="5" stroke="#234d20"/>
 </g>
 <g class="point" transform="translate(251.40843,112.67294)">
-<circle cx="0" cy="0" fill="#71c7ec" r="5" stroke="#234d20"/>
+<circle cx="0" cy="0" fill="#234d20" r="5" stroke="#234d20"/>
 </g>
 <g class="point" transform="translate(350,57.797638)">
-<circle cx="0" cy="0" fill="#71c7ec" r="5" stroke="#234d20"/>
+<circle cx="0" cy="0" fill="#234d20" r="5" stroke="#234d20"/>
 </g>
 <g class="point" transform="translate(448.59155,88.644714)">
-<circle cx="0" cy="0" fill="#71c7ec" r="5" stroke="#234d20"/>
+<circle cx="0" cy="0" fill="#234d20" r="5" stroke="#234d20"/>
 </g>
 <g class="point" transform="translate(547.1831,109.53412)">
-<circle cx="0" cy="0" fill="#71c7ec" r="5" stroke="#234d20"/>
+<circle cx="0" cy="0" fill="#234d20" r="5" stroke="#234d20"/>
 </g>
 <g class="point" transform="translate(645.77466,67.53885)">
-<circle cx="0" cy="0" fill="#71c7ec" r="5" stroke="#234d20"/>
+<circle cx="0" cy="0" fill="#234d20" r="5" stroke="#234d20"/>
 </g>
 <path class="line" d="M54.225327,55.632935 L152.81688,100.98355 L251.40843,112.67294 L350,57.797638 L448.59155,88.644714 L547.1831,109.53412 L645.77466,67.53885" fill="none" stroke="#234d20" stroke-width="2"/>
 </g>
