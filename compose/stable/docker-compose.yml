@@ -16,10 +16,16 @@ services:
       - LC_API_HTTP_READ_TIMEOUT=5
       - LC_API_HTTP_WRITE_TIMEOUT=10
       - LC_API_HTTP_IDLE_TIMEOUT=120
+      - LC_METRICS_ADDRESS=0.0.0.0:54013
+      - LC_METRICS_SHUTDOWN_TIMEOUT=5
+      - LC_METRICS_READ_TIMEOUT=5
+      - LC_METRICS_WRITE_TIMEOUT=10
+      - LC_METRICS_IDLE_TIMEOUT=120
     ports:
       - "54010:54010"
       - "54011:54011"
       - "54012:54012"
+      - "54013:54013"
   lc-renderer:
     image: ghcr.io/limpidchart/lc-renderer:latest
     environment:
